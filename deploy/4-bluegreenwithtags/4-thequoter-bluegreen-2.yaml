@@ -1,0 +1,27 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: thequoter-v2
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: thequoter-v2
+        # app: thequoter
+    spec:
+      containers:
+      - name: agileqc
+        image: pastjean/agileqc:v1
+        ports:
+        - name: http
+          containerPort: 8080
+        livenessProbe:
+          httpGet:
+            path: /
+            port: http
+        readinessProbe:
+          httpGet:
+            path: /
+            port: http
+          initialDelaySeconds: 20

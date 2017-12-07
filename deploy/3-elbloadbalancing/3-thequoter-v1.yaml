@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: thequoter-v1-sharedlb
+  labels:
+    app: thequoter
+spec:
+  containers:
+  - name: agileqc
+    image: pastjean/agileqc:v1
+    ports:
+    - name: http
+      containerPort: 8080

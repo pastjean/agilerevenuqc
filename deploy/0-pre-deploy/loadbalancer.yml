@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: thequother
+spec:
+  selector:
+    app: thequother
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
