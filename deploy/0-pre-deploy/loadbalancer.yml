@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: thequother
+  name: thequoter
 spec:
   selector:
-    app: thequother
+    app: thequoter
   type: LoadBalancer
   ports:
     - protocol: TCP
