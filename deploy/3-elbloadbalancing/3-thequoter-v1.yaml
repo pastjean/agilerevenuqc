@@ -8,6 +8,7 @@ spec:
   containers:
   - name: agileqc
     image: pastjean/agileqc:v1
+    imagePullPolicy: Always
     ports:
     - name: http
       containerPort: 8080

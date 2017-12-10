@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: thequoter
 spec:
-  replicas: 10
+  replicas: 15
   minReadySeconds: 30
   strategy: 
     type: RollingUpdate
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: agileqc
-        image: pastjean/agileqc:v1
+        image: pastjean/agileqc:v2
         ports:
         - name: http
           containerPort: 8080
